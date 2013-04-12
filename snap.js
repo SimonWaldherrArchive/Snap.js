@@ -6,11 +6,11 @@
  * http://opensource.org/licenses/MIT
  *
  * Github:  http://github.com/jakiestfu/Snap.js/
- * Version: 1.4
+ * Version: 1.5
  */
 /*jslint browser: true*/
 /*global define, module, ender*/
-(function(undefined) {
+(function() {
     'use strict';
     var Snap = Snap || function(userOpts) {
         var settings = {
@@ -97,7 +97,7 @@
             translate: {
                 get: {
                     matrix: function(index) {
-                        var matrix = window.getComputedStyle(settings.element).webkitTransform.match(/\((.*)\)/);
+                        var matrix = window.getComputedStyle(settings.element).webkitTransform.match(/matrix\(([\d\u002D\u0020,]*)\)/);
                         if (matrix) {
                             matrix = matrix[1].split(',');
                             return parseInt(matrix[index], 10);
@@ -132,6 +132,7 @@
                     utils.events.addEvent(settings.element, utils.eventType('down'), action.drag.startDrag);
                     utils.events.addEvent(settings.element, utils.eventType('move'), action.drag.dragging);
                     utils.events.addEvent(settings.element, utils.eventType('up'), action.drag.endDrag);
+                    utils.events.addEvent(settings.element, utils.eventType('out'), action.drag.endDrag);
                 },
                 startDrag: function(e) {
                     
