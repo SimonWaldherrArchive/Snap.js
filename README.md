@@ -7,6 +7,10 @@ A Library for creating beautiful mobile shelfs in Javascript
 
 <a href="http://www.screenr.com/embed/0EJ7" target="_blank"><img src="http://i.imgur.com/t3mGcEx.gif"></a>
 
+[Tap here](http://jakiestfu.github.io/Snap.js/demo/apps/ratchet/template.html) or scan the QR-Code for the mobile demo
+
+<img src="https://f.cloud.github.com/assets/198920/347680/5e8461a8-9eea-11e2-9dba-aa464825e033.png" height="250px" width="250px">
+
 ## Whats a Shelf?
 This UX idea has been called many things. Shelf, drawer, droor, slider, backpane, side-menu, but I like to call it a shelf.
 
